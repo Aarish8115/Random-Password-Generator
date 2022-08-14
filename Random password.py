@@ -19,5 +19,9 @@ password="".join(random.sample(all,length))
 # printing the password
 print("Your random generated password is\n"+password)
 
+# to save the last password in a text file
+with open("Last_pass.txt","w") as f:
+    f.write(password)
+
 # this line so that the password is automatically copied to your clipboard
 pyperclip.copy(password)
